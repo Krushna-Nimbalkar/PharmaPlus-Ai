@@ -29,7 +29,9 @@ PharmaPlus-Ai/
 │   │   ├── authRoutes.js
 │   │   ├── doctorRoutes.js
 │   │   └── mrRoutes.js
-│   ├── seed/defaultAdmin.js
+│   ├── seed/
+│   │   ├── defaultAdmin.js
+│   │   └── defaultUsers.js
 │   ├── services/emailService.js
 │   └── server.js
 ├── .env.example
@@ -47,15 +49,18 @@ PharmaPlus-Ai/
    ```bash
    npm run dev
    ```
+4. Open browser: `http://localhost:5000`
 
-## Default Admin (Auto Created)
-When server starts, it creates default admin if missing:
-- Email: `admin@gmail.com`
-- Password: `admin123`
-- Role: `admin`
+## Preview / Default Logins
+These users are auto-created if missing on startup:
+- **Admin**: `admin@gmail.com` / `admin123`
+- **Doctor**: `doctor@gmail.com` / `doctor123`
+- **MR**: `mr@gmail.com` / `mr123`
+
+> If you only want admin auto-seeding, set `SEED_DEMO_USERS=false` in `.env`.
 
 ## Key Features
-- JWT login with role-aware dashboard redirection.
+- JWT login with role-aware dashboard rendering.
 - RBAC middleware protection for Admin/Doctor/MR APIs.
 - Admin can add/remove users and view all users.
 - Doctor sees drugs by specialization and submits feedback.
