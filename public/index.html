@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PharmaPulse AI</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <h1>PharmaPulse AI</h1>
+      <div id="navActions"></div>
+    </nav>
+
+    <main class="container">
+      <section id="loginSection" class="card">
+        <h2>Login</h2>
+        <form id="loginForm" class="form-grid">
+          <input type="email" id="loginEmail" placeholder="Email" required />
+          <input type="password" id="loginPassword" placeholder="Password" required />
+          <button type="submit">Login</button>
+        </form>
+        <p class="hint">Default admin: admin@gmail.com / admin123</p>
+      </section>
+
+      <section id="adminSection" class="card hidden"></section>
+      <section id="doctorSection" class="card hidden"></section>
+      <section id="mrSection" class="card hidden"></section>
+    </main>
+
+    <script src="/js/app.js"></script>
+  </body>
+</html>
