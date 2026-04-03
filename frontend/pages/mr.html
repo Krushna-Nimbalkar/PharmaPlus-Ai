@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MR Dashboard - PharmaPulse AI</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <h2>MR Dashboard</h2>
+    <div>
+      <a href="#" id="logoutBtn">Logout</a>
+    </div>
+  </nav>
+
+  <main class="container grid-2">
+    <section class="card">
+      <h3>Add New Drug</h3>
+      <form id="drugForm">
+        <input id="drugName" placeholder="Drug name" required />
+        <input id="drugCategory" placeholder="Category" required />
+        <textarea id="drugDescription" placeholder="Description" required></textarea>
+        <input id="drugSpecialization" placeholder="Target specialization" required />
+        <button type="submit">Submit Drug</button>
+      </form>
+      <p id="submitStatus"></p>
+    </section>
+
+    <section class="card">
+      <h3>Submitted Drugs</h3>
+      <div id="mrDrugList" class="stack"></div>
+    </section>
+  </main>
+
+  <script src="../js/config.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/mr.js"></script>
+</body>
+</html>

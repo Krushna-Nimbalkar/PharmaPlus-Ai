@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard - PharmaPulse AI</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <h2>Admin Panel</h2>
+    <div>
+      <a href="#" id="logoutBtn">Logout</a>
+    </div>
+  </nav>
+
+  <main class="container grid-2">
+    <section class="card">
+      <h3>Add Doctor</h3>
+      <form id="doctorForm">
+        <input placeholder="Name" id="doctorName" required />
+        <input placeholder="Email" id="doctorEmail" type="email" required />
+        <input placeholder="Specialization" id="doctorSpecialization" required />
+        <input placeholder="Password" id="doctorPassword" type="password" required />
+        <button type="submit">Add Doctor</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h3>Add Medical Representative</h3>
+      <form id="mrForm">
+        <input placeholder="Name" id="mrName" required />
+        <input placeholder="Email" id="mrEmail" type="email" required />
+        <input placeholder="Company" id="mrCompany" required />
+        <input placeholder="Password" id="mrPassword" type="password" required />
+        <button type="submit">Add MR</button>
+      </form>
+    </section>
+
+    <section class="card full-width">
+      <h3>All Users</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Specialization/Company</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="usersTable"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="../js/config.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>
